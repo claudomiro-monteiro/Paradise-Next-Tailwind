@@ -18,6 +18,7 @@ const config: Config = {
         'paradise-green-400': '#60c87c',
         'paradise-green-600': '#2B8E46',
         'paradise-yellow-600': '#cc9002',
+        'paradise-zinc-900': '#3d3d3d',
       },
     },
   },

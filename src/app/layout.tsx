@@ -24,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${meaculpa.variable}`}>
       <body>
-        <div className="grid min-h-screen bg-black">
+        <div className="grid min-h-screen bg-paradise-green-200">
           <Header />
-          <main className="overflow-x-hidden font-sans text-white">
+          <main className="text-paradise-zinc-900 overflow-x-hidden font-sans">
             {children}
           </main>
           <Footer />

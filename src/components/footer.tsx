@@ -9,7 +9,7 @@ export default function Footer() {
         <p>Colonia do Piagui</p>
         <p>Guaratinguetá - SP</p>
       </div>
-      <div className="m-8 h-px bg-white" />
+      <div className="bg-paradise-zinc-900 m-8 h-px" />
       <span className="flex justify-center text-center">
         Todos os direitos reservados para Paradise Eventos | 2024
       </span>

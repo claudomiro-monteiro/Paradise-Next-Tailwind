@@ -54,8 +54,11 @@ export function Contact() {
   return (
     <div className="px-4 py-8">
       <h1 className="font-meaculpa text-3xl">Contato</h1>
-      <div className="my-4 h-px bg-white" />
+      <div className="bg-paradise-zinc-900 my-4 h-px" />
       <div className="flex flex-col gap-3 ">
+        <span className="my-4 text-center">
+          Envie uma mensagem e venha conhecer nosso espaço.
+        </span>
         <FormProvider {...createForm}>
           <form
             id="send"
@@ -80,14 +83,17 @@ export function Contact() {
               <Form.Prefix>
                 <At size={28} />
               </Form.Prefix>
-              <Form.Input placeholder="Email" name="email" />
+              <Form.Input
+                placeholder="paradiseeventos@gmail.com"
+                name="email"
+              />
             </Form.Field>
             <Form.ErrorMessage field="email" />
             <Form.Field>
               <Form.Prefix>
                 <DeviceMobile size={28} />
               </Form.Prefix>
-              <Form.Input placeholder="Celular" name="cellphone" />
+              <Form.Input placeholder="(xx) 9 9999-9999" name="cellphone" />
             </Form.Field>
             <Form.ErrorMessage field="cellphone" />
             <Form.Field>
@@ -101,7 +107,7 @@ export function Contact() {
           <button
             type="submit"
             form="send"
-            className="flex items-center justify-center gap-2 rounded-md bg-paradise-green-300 px-9 py-2 font-meaculpa text-lg font-semibold text-black"
+            className="mt-4 flex items-center justify-center gap-2 rounded-md bg-paradise-green-300 px-9 py-2 font-meaculpa text-lg font-semibold text-black"
           >
             Enviar
             <PaperPlaneRight size={24} />

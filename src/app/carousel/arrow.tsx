@@ -9,7 +9,7 @@ export default function Arrow(props: {
   return (
     <svg
       onClick={props.onClick}
-      className={`absolute top-2/4 h-8 w-8 -translate-y-2/4 cursor-pointer hover:text-paradise-yellow-600 ${
+      className={`absolute top-2/4 hidden h-8 w-8 -translate-y-2/4 cursor-pointer hover:text-paradise-yellow-600 ${
         props.left ? 'left-2' : 'left-auto right-2'
       }`}
     >

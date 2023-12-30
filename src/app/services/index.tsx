@@ -3,11 +3,11 @@ import Image from 'next/image'
 export function Services() {
   return (
     <div className="px-4 py-8">
-      <h1 className="font-meaculpa text-3xl">Services</h1>
-      <div className="my-4 h-px bg-white" />
+      <h1 className="font-meaculpa text-3xl">Serviços</h1>
+      <div className="bg-paradise-zinc-900 my-4 h-px" />
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="mb-4 text-center font-meaculpa text-2xl">
-          Produzimos alegrias e serviços memoráveis
+          Realizamos serviços memoráveis
         </h1>
         <div className="relative w-80 max-w-xs">
           <Image

@@ -15,7 +15,7 @@ export function Sidebar() {
         openSidebar ? 'w-full' : 'w-0'
       }`}
     >
-      <nav className="flex flex-col justify-center font-meaculpa">
+      <nav className="flex flex-col justify-center font-meaculpa text-2xl">
         <Link
           href="#"
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"

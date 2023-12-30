@@ -106,7 +106,7 @@ export default function Carousel() {
                     instanceRef.current?.moveToIdx(idx)
                   }}
                   className={
-                    'mx-1 h-1 w-1 cursor-pointer rounded-full border-none bg-gray-950 p-1 focus:outline-none' +
+                    'mx-1 h-1 w-1 cursor-pointer rounded-full border-none bg-gray-950 p-[2px] focus:outline-none' +
                     (currentSlide === idx ? ' bg-paradise-yellow-600' : '')
                   }
                 ></button>
