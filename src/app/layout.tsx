@@ -26,7 +26,7 @@ export default function RootLayout({
       <body>
         <div className="grid min-h-screen bg-paradise-green-200">
           <Header />
-          <main className="text-paradise-zinc-900 overflow-x-hidden font-sans">
+          <main className="overflow-x-hidden font-sans text-paradise-zinc-900">
             {children}
           </main>
           <Footer />

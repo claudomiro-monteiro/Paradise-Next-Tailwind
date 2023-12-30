@@ -54,7 +54,7 @@ export function Contact() {
   return (
     <div className="px-4 py-8">
       <h1 className="font-meaculpa text-3xl">Contato</h1>
-      <div className="bg-paradise-zinc-900 my-4 h-px" />
+      <div className="my-4 h-px bg-paradise-zinc-900" />
       <div className="flex flex-col gap-3 ">
         <span className="my-4 text-center">
           Envie uma mensagem e venha conhecer nosso espaço.
