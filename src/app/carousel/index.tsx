@@ -58,8 +58,8 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="relative">
-        <div ref={sliderRef} className="keen-slider h-[60vw]">
+      <div className="relative" id="carousel">
+        <div ref={sliderRef} className="keen-slider h-[60vw] md:h-[45vw]">
           <div className="keen-slider__slide">
             <Image src={slide01} alt="" className="object-contain" />
           </div>
@@ -106,7 +106,7 @@ export default function Carousel() {
                     instanceRef.current?.moveToIdx(idx)
                   }}
                   className={
-                    'mx-1 h-1 w-1 cursor-pointer rounded-full border-none bg-gray-950 p-[2px] focus:outline-none' +
+                    'mx-1 h-1 w-1 cursor-pointer rounded-full border-none bg-gray-950 p-[2px] focus:outline-none md:p-1' +
                     (currentSlide === idx ? ' bg-paradise-yellow-600' : '')
                   }
                 ></button>

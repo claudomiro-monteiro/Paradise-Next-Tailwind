@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'react-scroll'
 import {
   FacebookLogo,
   InstagramLogo,
@@ -8,35 +8,67 @@ import { MobileContext } from './header'
 import { useContext } from 'react'
 
 export function Sidebar() {
-  const { openSidebar } = useContext(MobileContext)
+  const { openSidebar, handleOpenSidebar } = useContext(MobileContext)
   return (
     <div
       className={`fixed bottom-0 right-0 z-10 flex h-[calc(100%-4rem)] flex-col bg-paradise-green-600 transition-all duration-300 ${
         openSidebar ? 'w-full' : 'w-0'
       }`}
     >
-      <nav className="flex flex-col justify-center font-meaculpa text-2xl">
+      <nav className="flex flex-col justify-center font-meaculpa text-2xl md:hidden">
         <Link
-          href="#"
+          activeClass="active"
+          to="carousel"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          duration={500}
+          isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
+          onClick={handleOpenSidebar}
         >
           Inicio
         </Link>
         <Link
-          href="#"
+          activeClass="active"
+          to="services"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          duration={500}
+          isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
+          onClick={handleOpenSidebar}
         >
-          Galeria
+          Serviços
         </Link>
         <Link
-          href="#"
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          duration={500}
+          isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
+          onClick={handleOpenSidebar}
         >
           Sobre
         </Link>
         <Link
-          href="#"
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          duration={500}
+          isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
+          onClick={handleOpenSidebar}
         >
           Contato
         </Link>

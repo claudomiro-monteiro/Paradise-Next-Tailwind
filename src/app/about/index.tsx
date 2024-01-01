@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <div className="px-4 py-8">
+    <div className="px-4 py-8" id="about">
       <h1 className="font-meaculpa text-3xl">About</h1>
       <div className="my-4 h-px bg-paradise-zinc-900" />
       <p className="p-4">

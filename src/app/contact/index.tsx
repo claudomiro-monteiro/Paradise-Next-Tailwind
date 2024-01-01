@@ -3,17 +3,20 @@
 import {
   At,
   DeviceMobile,
+  Envelope,
   EnvelopeOpen,
   FacebookLogo,
   InstagramLogo,
+  MapPin,
   PaperPlaneRight,
+  Phone,
   UserCircle,
-  WhatsappLogo,
 } from '@phosphor-icons/react'
 import { Form } from '../../components/form'
 import { FormProvider, useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import Image from 'next/image'
 
 const createFormSchema = z.object({
   name: z
@@ -52,33 +55,35 @@ export function Contact() {
   }
 
   return (
-    <div className="px-4 py-8">
+    <div className="px-4 py-8" id="contact">
       <h1 className="font-meaculpa text-3xl">Contato</h1>
       <div className="my-4 h-px bg-paradise-zinc-900" />
-      <div className="flex flex-col gap-3 ">
-        <span className="my-4 text-center">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 ">
+        <span className="col-span-2 my-4 text-center">
           Envie uma mensagem e venha conhecer nosso espaço.
         </span>
         <FormProvider {...createForm}>
           <form
             id="send"
             onSubmit={handleSubmit(newContact)}
-            className="flex flex-col gap-4"
+            className="grid grid-cols-1 gap-4"
           >
-            <Form.Field>
-              <Form.Prefix>
-                <UserCircle size={28} />
-              </Form.Prefix>
-              <Form.Input placeholder="Nome" name="name" />
-            </Form.Field>
-            <Form.ErrorMessage field="name" />
-            <Form.Field>
-              <Form.Prefix>
-                <UserCircle size={28} />
-              </Form.Prefix>
-              <Form.Input placeholder="Sobrenome" name="lastname" />
-            </Form.Field>
-            <Form.ErrorMessage field="lastname" />
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <Form.Field>
+                <Form.Prefix>
+                  <UserCircle size={28} />
+                </Form.Prefix>
+                <Form.Input placeholder="Nome" name="name" />
+              </Form.Field>
+              <Form.ErrorMessage field="name" />
+              <Form.Field>
+                <Form.Prefix>
+                  <UserCircle size={28} />
+                </Form.Prefix>
+                <Form.Input placeholder="Sobrenome" name="lastname" />
+              </Form.Field>
+              <Form.ErrorMessage field="lastname" />
+            </div>
             <Form.Field>
               <Form.Prefix>
                 <At size={28} />
@@ -104,21 +109,41 @@ export function Contact() {
             </Form.Field>
             <Form.ErrorMessage field="message" />
           </form>
+          <div className="relative col-span-2 flex flex-col items-center justify-evenly rounded-md text-center text-lg md:col-span-1">
+            <Image
+              src="/slides/02.jpg"
+              alt=""
+              width={100}
+              height={100}
+              quality={100}
+              className="w-full max-w-sm rounded-md"
+            />
+            <div className="absolute flex flex-col items-center gap-4 rounded-sm bg-white/10 p-4 text-lg text-black backdrop-blur-sm">
+              <div className="flex gap-2">
+                <Envelope size={32} /> <span>paradiseeventos@gmail.com</span>
+              </div>
+              <div className="flex gap-2">
+                <Phone size={32} /> <span>(12) 9 9999-9999</span>
+              </div>
+              <div className="flex gap-2">
+                <MapPin size={32} /> <span>Guaratinguetá - SP - Brasil</span>
+              </div>
+              <div className="mt-4 flex h-1/4 gap-12">
+                <FacebookLogo size={32} />
+                <InstagramLogo size={32} />
+                {/* <WhatsappLogo size={32} /> */}
+              </div>
+            </div>
+          </div>
           <button
             type="submit"
             form="send"
-            className="mt-4 flex items-center justify-center gap-2 rounded-md bg-paradise-green-300 px-9 py-2 font-meaculpa text-lg font-semibold text-black"
+            className="col-span-2 mt-4 flex items-center justify-center gap-2 rounded-md bg-paradise-green-300 px-9 py-2 font-meaculpa text-lg font-semibold text-black md:w-40"
           >
             Enviar
             <PaperPlaneRight size={24} />
           </button>
         </FormProvider>
-
-        <div className="mt-8 flex h-1/4 items-center justify-evenly">
-          <FacebookLogo size={32} />
-          <InstagramLogo size={32} />
-          <WhatsappLogo size={32} />
-        </div>
       </div>
     </div>
   )
