@@ -24,7 +24,7 @@ export function Header() {
 
   return (
     <MobileContext.Provider value={{ openSidebar, handleOpenSidebar }}>
-      <header className="flex h-16 items-center justify-between bg-paradise-green-300 px-8 text-paradise-zinc-900 md:h-20">
+      <header className="sticky top-0 z-10 flex h-16 items-center justify-between bg-paradise-green-300 px-8 text-paradise-zinc-900 md:h-20">
         <Image
           src="/paradise01.svg"
           alt=""

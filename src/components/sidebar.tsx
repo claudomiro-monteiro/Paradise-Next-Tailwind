@@ -22,7 +22,7 @@ export function Sidebar() {
           spy={true}
           smooth={true}
           hashSpy={true}
-          offset={0}
+          offset={-64}
           duration={500}
           isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
@@ -36,7 +36,7 @@ export function Sidebar() {
           spy={true}
           smooth={true}
           hashSpy={true}
-          offset={0}
+          offset={-64}
           duration={500}
           isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
@@ -50,7 +50,7 @@ export function Sidebar() {
           spy={true}
           smooth={true}
           hashSpy={true}
-          offset={0}
+          offset={-64}
           duration={500}
           isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
@@ -64,7 +64,7 @@ export function Sidebar() {
           spy={true}
           smooth={true}
           hashSpy={true}
-          offset={0}
+          offset={-64}
           duration={500}
           isDynamic={true}
           className="py-8 text-center hover:bg-paradise-green-400 hover:text-black"
