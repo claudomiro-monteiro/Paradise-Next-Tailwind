@@ -118,7 +118,7 @@ export function Contact() {
               quality={100}
               className="w-full max-w-sm rounded-md"
             />
-            <div className="absolute flex flex-col items-center gap-4 rounded-sm bg-white/10 p-4 text-lg text-black backdrop-blur-sm">
+            <div className="absolute flex flex-col items-center gap-2 rounded-sm bg-white/10 p-2 text-xs text-black backdrop-blur-sm md:gap-4 md:p-4 md:text-lg">
               <div className="flex gap-2">
                 <Envelope size={32} /> <span>paradiseeventos@gmail.com</span>
               </div>

@@ -47,7 +47,7 @@ export function Header() {
         <Sidebar />
         <nav className="hidden items-center gap-4 font-meaculpa text-2xl md:flex">
           <Link
-            activeClass="active"
+            activeClass="text-paradise-yellow-600 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:rounded-t after:bg-paradise-yellow-600 after:content-['']"
             to="services"
             spy={true}
             smooth={true}
@@ -60,7 +60,7 @@ export function Header() {
             Serviços
           </Link>
           <Link
-            activeClass="active"
+            activeClass="text-paradise-yellow-600 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:rounded-t after:bg-paradise-yellow-600 after:content-['']"
             to="about"
             spy={true}
             smooth={true}
@@ -72,8 +72,10 @@ export function Header() {
           >
             Sobre
           </Link>
+        </nav>
+        <div className="hidden items-center gap-4 font-meaculpa text-2xl md:flex">
           <Link
-            activeClass="active"
+            activeClass="bg-paradise-yellow-600"
             to="contact"
             spy={true}
             smooth={true}
@@ -86,7 +88,7 @@ export function Header() {
             <Envelope size={24} />
             Contato
           </Link>
-        </nav>
+        </div>
       </header>
     </MobileContext.Provider>
   )
