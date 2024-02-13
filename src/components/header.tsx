@@ -5,7 +5,7 @@ import { Rotate as Hamburger } from 'hamburger-react'
 import { Sidebar } from './sidebar'
 import { createContext, useState } from 'react'
 import Image from 'next/image'
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scrool } from 'react-scroll'
 import { Envelope } from '@phosphor-icons/react'
 
 interface OpenSidebarProps {
@@ -22,6 +22,10 @@ export function Header() {
     setOpenSidebar(!openSidebar)
   }
 
+  function Scrool() {
+    scrool.scrollToTop()
+  }
+
   return (
     <MobileContext.Provider value={{ openSidebar, handleOpenSidebar }}>
       <header className="sticky top-0 z-10 flex h-16 items-center justify-between bg-paradise-green-300 px-8 text-paradise-zinc-900 md:h-20">
@@ -31,7 +35,8 @@ export function Header() {
           width={100}
           height={100}
           quality={100}
-          className="w-32 md:w-40"
+          className="w-32 cursor-pointer md:w-40"
+          onClick={Scrool}
         />
         <div className="md:hidden">
           <Hamburger
